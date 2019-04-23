@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row title">
+    <div class="col-xl">
+      {{::title}}
+    </div>
+  </div>
+  <div class="row header">
+    <div class="col-sm" ng-repeat="header in headers">
+      {{::header}}
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm" >
+      <div ng-repeat="item in doingItems">
+      <card item="item"
+            on-add="addItem(item)"
+            on-click="click(item)"
+            on-remove="deleteClick(item)">
+      </card>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div ng-repeat="item in doneItems">
+        <card item="item"
+              on-remove="deleteClick(item)">
+        </card>
+      </div>
+    </div>
+  </div>
+  
+</div>

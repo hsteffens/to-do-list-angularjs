@@ -1,0 +1,16 @@
+.card {
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid;
+  border-radius: 15px;
+}
+
+.card-title {
+  border: 0;
+  text-align: center;
+}
+
+.card-title[disabled] {
+  background-color: white;
+  width: 100%;
+}

@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-body">
+    <input type="text" 
+            ng-class="{'form-control': item.status === 0, 'card-title': item.status === 1}" ng-disabled="{{item.status == 1}}"
+            placeholder="Title" ng-model="item.title" aria-describedby="basic-addon1">
+    <input type="text" 
+            ng-class="{'form-control': item.status === 0, 'card-title': item.status === 1}" ng-disabled="{{item.status == 1}}"
+            placeholder="Description" ng-model="item.description" aria-describedby="basic-addon1">
+    
+  </div>
+  <div class="card-footer bg-transparent">
+    <button 
+      type="button" 
+      class="btn btn-primary" 
+      ng-show="canAddItem(item)"
+      ng-click="addClick(item)">
+      Add
+    </button>
+    <button 
+      type="button" 
+      class="btn btn-primary" 
+      ng-show="canFinishItem(item)"
+      ng-click="doneClick(item)">
+      Done
+    </button>
+    <button 
+      type="button" 
+      class="btn btn-secondary"
+      ng-click="deleteClick(item)">
+      Remove
+    </button>
+  </div>
+</div>
